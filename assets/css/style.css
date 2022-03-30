@@ -1,4 +1,23 @@
 * 
 header {
     padding-top: 30px;
-    padding-bottom: 12px;}
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.column{
+    display: flex;
+    gap: 5px;
+    min-height: 20px;
+}
