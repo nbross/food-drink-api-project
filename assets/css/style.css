@@ -1,0 +1,152 @@
+* {
+    margin: 05px;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    /* margin: 20px; */
+    align-items: center;
+    font-family: century;
+    font-size:  5rem;
+    text-decoration: none;
+    margin: 20px;
+    padding-bottom: 60px;
+
+}
+
+.hero-form {
+    background-color: rgba(255, 225, 56, 0.8);
+    padding: 20px;
+    width: 40%;
+    margin: 3.5%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* .hero-form button:hover {
+    background-color: var(--tertiary-color);   */
+  
+  
+  .hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .hero-form p {
+    margin: 5px 0 15px 0;
+  }
+  
+  .form-input {
+    border: 1px solid var(--secondary-color);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: var(--secondary-color);
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px; 
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+  }
+  
+  .form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+  }
+  
+  .hero-form label {
+    margin: 0 5px;
+  }
+  
+  .hero-form button {
+    
+    
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  } 
+  
+  
+  .hero-form button:hover {
+    background-color: whitesmoke;  
+  }
+
+  .hero-form1 {
+    background-color: rgba(255, 225, 56, 0.8);
+    padding: 20px;
+    
+    width: 40%;
+    margin: 3.5%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .hero-form1 button:hover {
+    background-color: white
+  }
+  
+  .hero-form1 h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .hero-form1 p {
+    margin: 5px 0 15px 0;
+  }
+  
+  
+  .form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+  }
+  
+  .hero-form1 label {
+    margin: 0 5px;
+  }
+/*    
+  .columns{
+      display: flex; */
+
+  
+  
+  .hero-form1 button {
+    background-color:  whitesmoke;  
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  } 
+  
+  
+  .hero-form1 button:hover {
+    background-color: white;  
+  }
+  /* .columns {
+      display: grid;
+      grid-template-columns: auto  auto;
+      padding: 20px;
+      */
+     
+     
+      
+  
+/* 
+  .box{
+      height: 200px;
+      width: 500px;
+  } */
+
+
+
+  
+  
+
+* 
+header {
+    padding-top: 30px;
+    padding-bottom: 12px;}
