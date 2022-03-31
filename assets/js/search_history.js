@@ -1,0 +1,1 @@
+// this will be responsible for generating wha comes out of the search history section

@@ -26,21 +26,22 @@
     margin: 3.5%;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* .hero-form button:hover {
+}
+
+/* .hero-form button:hover {
     background-color: var(--tertiary-color);   */
-  
-  
-  .hero-form h3 {
+
+
+.hero-form h3 {
     font-size: 24px;
     margin: 0;
-  }
-  .hero-form p {
+}
+
+.hero-form p {
     margin: 5px 0 15px 0;
-  }
-  
-  .form-input {
+}
+
+.form-input {
     border: 1px solid var(--secondary-color);
     display: block;
     padding: 7px 15px;
@@ -51,32 +52,30 @@
     margin-bottom: 15px; 
     border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
-  }
-  
-  .form-input:focus {
+}
+
+.form-input:focus {
     background-color: rgba(255,255,255, 1);
     outline: none;
-  }
-  
-  .hero-form label {
+}
+
+.hero-form label {
     margin: 0 5px;
-  }
-  
-  .hero-form button {
-    
-    
+}
+
+.hero-form button {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-  } 
-  
-  
-  .hero-form button:hover {
-    background-color: whitesmoke;  
-  }
+} 
 
-  .hero-form1 {
+
+.hero-form button:hover {
+    background-color: whitesmoke;  
+}
+
+.hero-form1 {
     background-color: rgba(255, 225, 56, 0.8);
     padding: 20px;
     
@@ -84,67 +83,55 @@
     margin: 3.5%;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  
-  .hero-form1 button:hover {
+}
+
+.hero-form1 button:hover {
     background-color: white
-  }
-  
-  .hero-form1 h3 {
+}
+
+.hero-form1 h3 {
     font-size: 24px;
     margin: 0;
-  }
-  .hero-form1 p {
+}
+
+.hero-form1 p {
     margin: 5px 0 15px 0;
-  }
-  
-  
-  .form-input:focus {
+}
+
+.form-input:focus {
     background-color: rgba(255,255,255, 1);
     outline: none;
-  }
-  
-  .hero-form1 label {
+}
+
+.hero-form1 label {
     margin: 0 5px;
-  }
+}
 /*    
-  .columns{
+.columns{
       display: flex; */
 
-  
-  
-  .hero-form1 button {
+.hero-form1 button {
     background-color:  whitesmoke;  
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-  } 
-  
-  
-  .hero-form1 button:hover {
+} 
+
+.hero-form1 button:hover {
     background-color: white;  
-  }
-  /* .columns {
-      display: grid;
-      grid-template-columns: auto  auto;
-      padding: 20px;
-      */
-     
-     
-      
-  
+}
+/* .columns {
+    display: grid;
+    grid-template-columns: auto  auto;
+    padding: 20px;
+    */
+
 /* 
-  .box{
-      height: 200px;
-      width: 500px;
-  } */
-
-
-
-  
-  
+.box{
+    height: 200px;
+    width: 500px;
+    } */
 
 * 
 header {
