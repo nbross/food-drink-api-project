@@ -26,11 +26,36 @@ var getDrinkResults = function () {
     var apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/searchphp?s=margarita"
 
     fetch(apiUrl).then(function(response){
+        if (response.ok) {
         response.json().then(function(){
-
-        })
-    });
+            showDrinkOptions();
+        });
+} else {
+    document.getElementById('error').innerHTML = ("Error: " + response.statusText);
 }
+    })
+    .catch(function(error) {
+        document.getElementById('error').innerHTML = "Unable to connect to";
+    });
 
+    var getDrinkByIngredient = function() {
+        var apiUrl = "https://wwww.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingredient;
+        fetch(apiUrl).then(function(response) {
+            if(response.ok) {
+                response.json().then(function(data) {
+                    getDrinkByIngredient();
+                })
+            } else {
+                document.getElementById('error').innerHTML = ("Error: " + response.statusText);
+            }
+        });
+    };
+    
+    var showDrinkOptions = function() {
+        if(drinks.length === 0) {
+            drinkContainerEl.textContent = "No drinks found";
+        }
+    };
 
-heroFormEl.addEventListener("click");
+heroFormEl.addEventListener("click", drinkSearchHandler);
+}
