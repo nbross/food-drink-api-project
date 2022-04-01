@@ -5,38 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    
     <title>Meals & Drinks</title>
 </head>
 
+<!-- Header section-->
 <header>
-    <h1 class="header">Drinks.io</h1>
+  <nav>
+      <div class="logo">
+          <a>Cocktail River</a>
+          <p>An app for finding Your Favorite Cocktail </p>
+      </div>
+  </nav>
+   
 </header>
+<!--Header section ends-->
 <main>
-    <form>
-        
-        <div class="container">
-        <div class="columns">
-        <div class="hero-form1">
-        <div class="box">
 
-        <h3>Search Drink</h3>
-        <p>Fill out this form to seach for Drinks</p>
-        <form>
-            <label for="name">Enter Drink Name</label>
-            <input type="text" placeholder="Drink name" id="name" name="name" class="form-input" /></input>
     
-            <button type="submit">
-            Search!
-            </button>
-        </div>
-        </div> 
-        </div>
-        </div>
-    </form>
+   <!--Search Section starts-->
+   <form>
+     <div class="parent">
+    <div class="wrapper" id="searchSection">
+      <h3>Search Drink</h3>
+          <input type="text" placeholder="What are you looking for ?" id="name" name="name" class="form-input" /></input>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./assets/js/main.js"></script>
-<script src="./assets/js/cocktail.js"></script>
-<script src="./assets/js/search_history.js"></script>
+          <button type="search" id="searchEl">
+            Search!
+          </button>
+         
+    </div>
+    </form>
+    <!--Search history section Starts-->
+    <div class="wrapper2" id="list">
+      <!-- <a class="search-list">Search History</a> -->
+
+      <form id="history">Search history</form>
+    </div>
+  </div>
+  </main>
+
+<!--Search History seciton ends -->
 <body>
 </html>

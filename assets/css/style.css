@@ -1,139 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
 * {
-    margin: 05px;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ nav{
+  display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    background-color: #2a607c;
+    color: #ffffff;
     
-
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-    /* margin: 20px; */
-    align-items: center;
-    font-family: century;
-    font-size:  5rem;
-    text-decoration: none;
-    margin: 20px;
-    padding-bottom: 60px;
-
+nav .logo{
+   font-weight: bold;
+   padding: 10px;
+   width: 30%;
+   
+}
+nav .logo a{
+   color: #F08800;
+   font-size: 45px;   
 }
 
-.hero-form {
-    background-color: rgba(255, 225, 56, 0.8);
-    padding: 20px;
-    width: 40%;
-    margin: 3.5%;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+nav .logo p{
+   color:white;
+   font-size: 15px;
+   
+} 
 
-/* .hero-form button:hover {
-    background-color: var(--tertiary-color);   */
-
-
-.hero-form h3 {
-    font-size: 24px;
+  .form-input h3 { 
+    font-size: 20px;
     margin: 0;
-}
-
-.hero-form p {
-    margin: 5px 0 15px 0;
-}
-
-.form-input {
-    border: 1px solid var(--secondary-color);
+    color: #F08800;
+  }
+ 
+  .form-input {
+    border: 1px solid green;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: var(--secondary-color);
+    color: black;
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 15px; 
+    margin-bottom: 30px; 
     border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
-}
-
-.form-input:focus {
+  }
+  
+  .form-input1:focus {
     background-color: rgba(255,255,255, 1);
     outline: none;
-}
-
-.hero-form label {
-    margin: 0 5px;
-}
-
-.hero-form button {
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-} 
-
-
-.hero-form button:hover {
-    background-color: whitesmoke;  
-}
-
-.hero-form1 {
-    background-color: rgba(255, 225, 56, 0.8);
-    padding: 20px;
-    
-    width: 40%;
-    margin: 3.5%;
+  }
+  .parent{
+    height: 20vh;
+    margin-bottom: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrapper {
+    background-color: #36b5cf;
+    padding: 30px;
+    width: 30%;
+    margin: 0px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
+    margin-left: 60px;
+    margin-top: 50px;
 
-.hero-form1 button:hover {
-    background-color: white
-}
-
-.hero-form1 h3 {
-    font-size: 24px;
+  }
+  
+  .wrapper h3 {
+    font-size:  25px;
     margin: 0;
-}
-
-.hero-form1 p {
-    margin: 5px 0 15px 0;
-}
-
-.form-input:focus {
+  }
+  .form-input:focus {
     background-color: rgba(255,255,255, 1);
     outline: none;
-}
-
-.hero-form1 label {
-    margin: 0 5px;
-}
-/*    
-.columns{
-    display: flex; */
-
-.hero-form1 button {
+  }
+  
+  .wrapper button {
     background-color:  whitesmoke;  
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-} 
+    background-color: #ffffffbf
+  
+  }
+  .wrapper2 {
+    background-color:	#A0A0A0;
+    padding: 30px;
+    width: 30%;
+    margin: 250px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 60px;
+    margin-top: 50px;
 
-.hero-form1 button:hover {
-    background-color: white;  
-}
-/* .columns {
-    display: grid;
-    grid-template-columns: auto  auto;
-    padding: 20px;
-    */
+  }
+  @media screen and (max-width: 575px) {
+    
 
-/* 
-.box{
-    height: 200px;
-    width: 500px;
-    } */
 
-* 
-header {
-    padding-top: 30px;
-    padding-bottom: 12px;}
+  
+  
+  
+
+  
+  
+    
+ 
+  
+ 
+
+  
+
+
