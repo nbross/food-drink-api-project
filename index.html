@@ -6,31 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     
+    
     <title>Meals & Drinks</title>
 </head>
 
 <!-- Header section-->
 <header>
   <nav>
-      <div class="logo">
-          <a>Cocktail River</a>
-          <p>An app for finding Your Favorite Cocktail </p>
+      <div class="nabvar">
+          <h1>Cocktails</h1>
+             <p>An app for finding Your Favorite Cocktail </p>
       </div>
   </nav>
    
 </header>
 <!--Header section ends-->
+
+<!--Main Section starts-->
 <main>
 
-    
-   <!--Search Section starts-->
    <form>
      <div class="parent">
-    <div class="wrapper" id="searchSection">
+    <div class="wrapper" id="search-field">
       <h3>Search Drink</h3>
           <input type="text" placeholder="What are you looking for ?" id="name" name="name" class="form-input" /></input>
 
-          <button type="search" id="searchEl">
+          <button type="search" id="#search-button">
             Search!
           </button>
          
@@ -39,13 +40,16 @@
     <!--Search history section Starts-->
     <div class="wrapper2" id="list">
       <!-- <a class="search-list">Search History</a> -->
+      
+      <form id="history">Search history </form>
 
-      <form id="history">Search history</form>
-    </div>
-  </div>
   </main>
+  <!--Main Section  Ends-->
+  <!--script links-->
 
-<!--Search History seciton ends -->
+<script src="./assets/js/cocktail.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/search_history.js"></script>
 <body>
 
 

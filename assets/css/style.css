@@ -5,42 +5,47 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 
  nav{
   display: flex;
     justify-content: space-between;
-    padding: 10px 60px;
     background-color: #2a607c;
     color: #ffffff;
-    
-}
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 9999;
+  }
 
-nav .logo{
+
+nav .nabvar{
    font-weight: bold;
    padding: 10px;
    width: 30%;
    
 }
-nav .logo a{
+nav .nabvar h1{
    color: #F08800;
    font-size: 45px;   
 }
 
-nav .logo p{
+nav .nabvar a{
    color:white;
    font-size: 15px;
    
 } 
 
-  .form-input h3 { 
-    font-size: 20px;
-    margin: 0;
-    color: #F08800;
-  }
- 
   .form-input {
-    border: 1px solid green;
+    border: 1px solid  #36b5cf;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
@@ -52,16 +57,19 @@ nav .logo p{
     background-color: rgba(255,255,255, 0.75);
   }
   
-  .form-input1:focus {
+  .form-input:focus {
     background-color: rgba(255,255,255, 1);
     outline: none;
+
   }
+ 
   .parent{
     height: 20vh;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     background-color: white;
     display: flex;
     flex-direction: column;
+   
   }
   
   .wrapper {
@@ -91,8 +99,8 @@ nav .logo p{
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
-    background-color: #ffffffbf
-  
+    background-color: #ffffffbf;
+    cursor: pointer;
   }
   .wrapper2 {
     background-color:	#A0A0A0;
@@ -103,11 +111,118 @@ nav .logo p{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-left: 60px;
     margin-top: 50px;
-
-  }
-  @media screen and (max-width: 575px) {
     
+  }
+  @media screen and (max-width: 980px) {
+    nav{
+      width: 250%;
+      text-align: center;
+    }
+    .nabvar {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    
+    }
+    
+    .nabvar p{
+      width: 100%;
+      text-align: center;
+    }
+    
+    nav .navbar {
+      font-size: 20px;
+      
+    }
+  
+    .wrapper{
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      width: 80%;
+      margin-left: 10%;
+    }
+    .parent{
+      padding-bottom: 0;
+      justify-content: center;
+      width: 250%;
+      padding-right: 10%;
+      flex-direction:column;
+      padding-top: 30rem;
+    }
+    .wrapper2{
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      width: 80%;
+      margin-left: 10%;;
+    }
+    #history{
+      padding-bottom: 2rem;
+    }
+  }
 
+      
+  @media screen and (max-width: 768px) {
+    nav{
+      width: 250%;
+      text-align: center;
+    }
+    .nabvar {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    
+    }
+    
+    .nabvar p{
+      width: 100%;
+      text-align: center;
+    }
+    
+    nav .navbar {
+      font-size: 20px;
+      
+    }
+  
+    .wrapper{
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      width: 80%;
+      margin-left: 10%;
+    }
+    .parent{
+      padding-bottom: 0;
+      justify-content: center;
+      width: 250%;
+      padding-right: 10%;
+      flex-direction:column;
+      padding-top: 30rem;
+    }
+    .wrapper2{
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      width: 80%;
+      margin-left: 10%;;
+    }
+    #history{
+      padding-bottom: 2rem;
+    }
+  }
+
+      
+
+
+  
+  
 
   
   
