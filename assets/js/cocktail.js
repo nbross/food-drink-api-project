@@ -2,7 +2,7 @@
 // www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita - by name
 // www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin - by ingredient 
 
-var heroFormEl = document.querySelector(".hero-form");
+var heroFormEl = document.querySelector("search-field");
 var drinkNameEl = document.querySelector("#name");
 //this will be for the container to hold the api results
 //var drinkContainerEl = document.querySelector();
