@@ -9,7 +9,7 @@
 }
 
  nav{
-  display: flex;
+   display: flex;
     justify-content: space-between;
     background-color: #2a607c;
     color: #ffffff;
@@ -115,7 +115,7 @@ nav .nabvar a{
   }
   @media screen and (max-width: 980px) {
     nav{
-      /* width: 250%; */
+      width: 250%;
       text-align: center;
       justify-content: center;
     }
@@ -137,6 +137,9 @@ nav .nabvar a{
       font-size: 20px;
       
     }
+    .nabvar h3{
+      font-size: -webkit-xxx-large;
+    }
   
     .wrapper{
       /* padding-bottom: 0; */
@@ -146,6 +149,18 @@ nav .nabvar a{
       width: 80%;
       margin-left: 10%;
     }
+    .wrapper h3{
+      font-size: 50px;
+
+    }
+    .form-input{
+      font-size: 40px;
+    }
+
+    .wrapper button{
+      font-size: 40px;
+    }
+
     .parent{
       padding-bottom: 0;
       justify-content: center;
@@ -161,9 +176,11 @@ nav .nabvar a{
       text-align: center;
       width: 80%;
       margin-left: 10%;;
+
     }
     #history{
       padding-bottom: 2rem;
+      font-size: 200%;
     }
   }
 
@@ -192,12 +209,15 @@ nav .nabvar a{
     }
   
     .wrapper{
-      padding-bottom: 0;
+      padding-bottom: 20px;
       justify-content: center;
       position: relative;
       text-align: center;
       width: 80%;
       margin-left: 10%;
+    }
+    .wrapper button{
+      font-size: 30px;
     }
     .parent{
       padding-bottom: 0;
@@ -219,6 +239,7 @@ nav .nabvar a{
       padding-bottom: 2rem;
     }
   }
+ 
 
       
 
