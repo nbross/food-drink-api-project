@@ -6,8 +6,8 @@ $(document).ready(function() {
     /* Event listener for submitting search form directly */
     $('#search-form').on('submit', function(event) {
         event.preventDefault();
-        let searchTerm = $('#search-field').val();
-        runSearch(searchTerm);
+        let drinkSearchTerm = $('#search-field').val();
+        runSearch(drinkSearchTerm);
     });
 
     /* Event listener for clicking on search button */
