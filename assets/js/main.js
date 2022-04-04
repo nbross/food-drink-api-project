@@ -12,12 +12,12 @@ $(document).ready(function() {
 
     /* Event listener for clicking on search button */
     $('#search-button').on('click', function(event) {
-        let searchTerm = $('#search-field').val();
-        runSearch(searchTerm);
+        let drinkSearchTerm = $('#search-field').val();
+        runSearch(drinkSearchTerm);
     });
 
     /* This function is to help run the search */
-    const runSearch = (searchTerm) => {
-        drinkSearch(searchTerm);
+    const runSearch = (drinkSearchTerm) => {
+        drinkSearchHandler(drinkSearchTerm);
     };
 });
