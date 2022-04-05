@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Cocktail Buddy</title>
 </head>
-
 <!-- Header section-->
 <header>
   <nav>
@@ -41,6 +40,32 @@
       
       <form id="history">Search history </form>
 
+      <div class="column is-8">
+        <div class="notification is-warning is-size-7" id="search-results-container" style="display: none;">
+            <div class="columns is-multiline" id="search-results" style="background-color: azure;"></div>
+        </div>
+        <div class="notification is-default" id="recipe" style="display: none;">
+            <div class="columns">
+                <div class="column is-3">
+                    <img id="recipe_img"/>
+                </div>
+                <div class="column is-9">
+                    <h3 id="title" class="title"></h3>
+                    
+                    <div class="columns">
+                        <div class="column is-3">
+                            <ul id="measurement"></ul>
+                        </div>
+                        <div class="column is-4">
+                            <ul id="ingredient"></ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="columns">
+                <p id="instructions"></p>
+            </div>
   </main>
   <!--Main Section  Ends-->
   <!--script links-->
@@ -49,8 +74,4 @@
 <script src="./assets/js/cocktail.js"></script>
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/search_history.js"></script>
-<body>
-  <script src="assets/js/cocktail.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/search_history.js"></script>
 </html>
