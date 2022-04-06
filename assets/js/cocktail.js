@@ -8,35 +8,58 @@ var cocktailArray = [];
 var searchResultsContainerEl = document.querySelector("#search-results-container")
 var cocktailRecipeEl = document.querySelector("#recipe");
 var searchButtonEl = document.querySelector("#search-button");
+var drinkSearchTerm = $('#search-field').val();
 
 
-
-var drinkSearchHandler = function(drinkSearchTerm) {
+//var drinkSearchHandler = function(drinkSearchTerm) {
     
-    if(drinkSearchTerm) {
-        getDrinkResults(drinkSearchTerm);
-        searchResultsContainerEl = "";
-        drinkNameEl.value = ""
-    } else{   
-    var errorMessage = $('<p>').text("Please enter a cocktail name or type of alcohol to continue");
-    $("#search-field").append(errorMessage);
-    }
-};
+    //if(drinkSearchTerm) {
+        //getDrinkResults(drinkSearchTerm);
+        //searchResultsContainerEl = "";
+        //drinkNameEl.value = ""
+    //} else{   
+    //var errorMessage = $('<p>').text("Please enter a cocktail name or type of alcohol to continue");
+    //$("#search-field").append(errorMessage);
+    //}
+//};
 
-var getDrinkResults = function (drinkSearchTerm) {
+//$(document).ready(function() {
+    /* grabs the search history from localStorage and displays/loads it on the first page */
+    //displaySearchHistory();
+    
+    /* Event listener for submitting search form directly */
+    $('#search-form').on('submit', function(event) {
+        event.preventDefault();
+        let drinkSearchTerm = $('#search-field').val();
+        runSearch(drinkSearchTerm);
+    });
+
+    /* Event listener for clicking on search button */
+    $('#search-button').on('click', function(event) {
+        let drinkSearchTerm = $('#search-field').val();
+        runSearch(drinkSearchTerm);
+    });
+
+    /* This function is to help run the search */
+    const runSearch = (drinkSearchTerm) => {
+        getDrinkResults(drinkSearchTerm);
+    };
+
+
+var getDrinkResults = function () {
     var apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + drinkSearchTerm;
 
     fetch(apiUrl).then(function(response){
         if (response.ok) {
-        response.json().then(function(response){
-        
-            var searchResultsEl = ('#search-results');
-            cocktailArray = response.drinks;
-            //display options from user search
-            searchResultsEl.empty();
-            searchResultsContainerEl.classList= "display", "block";
-            cocktailRecipeEl.classList = "display" , "none";
+        response.json().then(function(drinkSearchTerm){
+            showDrinkOptions(drinkSearchTerm);
+        })
+        } else if (cocktailArray === null) {
+            var errorMessage = $('<p>').text("No results found.  Please try another search!");
+            $("#search-field").append(errorMessage);
+        };
             
+        //display saved searches
             displaySearchHistory(drinkSearchTerm);
             var savedDrinks = document.querySelector('[data-search="' + drinkSearchTerm + '"]');
 
@@ -49,30 +72,32 @@ var getDrinkResults = function (drinkSearchTerm) {
             localStorage.setItem('search_history', JSON.stringify(searchHistory));
 
             savedDrinks.innerHTML = drinkOptionsReturned;
-            //show the search results
-            for ( obj of cocktailArray) {
-                var resultElement = $("<div>").attr('class', 'column is-3');
-                var resultLink = $('<a id="' + obj.idDrink + '">');
-                var resultImg = $('<img>').attr('width', '200');
-                resultImg.attr('src', obj.strDrinkThumb);
-                var resultPara = $('<p>').text(obj.strDrink);
+            });
+    }
 
-                resultLink.attr("onClick", "drinkSelected(event)");
-                resultLink.append(resultImg);
-                resultLink.append(resultPara);
-                resultElement.append(resultLink);
+    var showDrinkOptions = function (drinkSearchTerm) {
+        var searchResultsEl = ('#search-results');
+        cocktailArray = drinkSearchTerm.drinks;
+        //display options from user search
+        searchResultsEl.empty();
+        searchResultsContainerEl.classList= "display", "block";
+        cocktailRecipeEl.classList = "display" , "none";
+       
+        for ( obj of cocktailArray) {
+            var resultElement = $("<div>").attr('class', 'column is-3');
+            var resultLink = $('<a id="' + obj.idDrink + '">');
+            var resultImg = $('<img>').attr('width', '200');
+            resultImg.attr('src', obj.strDrinkThumb);
+            var resultPara = $('<p>').text(obj.strDrink);
 
-                //place the elements for the drink on the page
-                $('#search-results').append(resultElement);
-            };
+            resultLink.attr("onClick", "drinkSelected(event)");
+            resultLink.append(resultImg);
+            resultLink.append(resultPara);
+            resultElement.append(resultLink);
 
-
-        });
-} else {
-    var errorMessage = $('<p>').text("No results found.  Please try another search!");
-    $("#search-field").append(errorMessage);
-};
-    })
+            //place the elements for the drink on the page
+            $('#search-results').append(resultElement);
+        };
     
 var drinkSelected = function(event) {
     //determine what was selected
@@ -124,6 +149,5 @@ var drinkSelection = function(selDrinkId) {
     }
 
 }
-
-searchButtonEl.addEventListener("click", getDrinkResults);
 }
+
