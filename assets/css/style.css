@@ -7,258 +7,94 @@
   font-family: 'Poppins', sans-serif;
   
 }
-
- nav{
-   display: flex;
-    justify-content: space-between;
+body {
+  margin: 0;
+  min-height: 1200px;
+}
+main {
+  margin-top:20px;
+}
+ .hero{
     background-color: #2a607c;
-    color: #ffffff;
-    padding: 20px 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 80%;
-    z-index: 9999;
+    opacity: 0.85;
+    height:180px;
+    padding-top:25px;
   }
 
 
-nav .nabvar{
-   font-weight: bold;
-   padding: 10px;
-   width: 30%;
-   
+h1{
+  color:#F08800;
+  text-align: center;
+  font-size:5.2em; 
+  font-weight: bold;
 }
-nav .nabvar h1{
+h2{
    color: #F08800;
-   font-size: 45px;   
+   text-align: center;
+   font-size: 2.2em;
+   margin-bottom: 50px;   
 }
 
-nav .nabvar a{
-   color:white;
-   font-size: 15px;
-   
+h3{
+   color:#F08800;
+   font-size: 2.2em;
+   text-align: center;
+   font-weight: bold;
 } 
 
-  .form-input {
-    border: 1px solid  #36b5cf;
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: black;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 30px; 
-    border-radius: 10px;
-    background-color: rgba(255,255,255, 0.75);
+  .fa-glass-martini {
+    margin-left: 10px;
   }
   
-  .form-input:focus {
-    background-color: rgba(255,255,255, 1);
-    outline: none;
-
+  #moodButton {
+    color: #F08800;
+    background-color: #2a607c;
+    height: 55px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.7);
+    margin: 5px 0 40px 0;
+    font-size: 1.9em;
+    font-weight: bold;
   }
  
-  .parent{
-    height: 20vh;
-    margin-bottom: 30px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-   
+  #shakebutton{
+    color: #F08800;
+    background-color: #2a607c;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.7);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 3px;
   }
   
-  .wrapper {
-    background-color: #36b5cf;
-    padding: 30px;
-    width: 30%;
-    margin: 0px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-left: 60px;
-    margin-top: 50px;
-
+  input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.7);
   }
   
-  .wrapper h3 {
-    font-size:  25px;
-    margin: 0;
+  .displayCocktail {
+    background: #fff;
+    opacity:0.85;
   }
-  .form-input:focus {
-    background-color: rgba(255,255,255, 1);
-    outline: none;
-  }
-  
-  .wrapper button {
-    background-color:  whitesmoke;  
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-    background-color: #ffffffbf;
-    cursor: pointer;
+  .drinkThumb {
+    height: 280px;
+    width: 265px;
+    border-radius: 3px;
   }
   
-  .wrapper2 {
-    background-color:	#A0A0A0;
-    padding: 30px;
-    width: 30%;
-    margin: 250px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-left: 60px;
-    margin-top: 50px;
+  .displayCocktail {
+    padding: 25px 0 25px 0;
+  }
+  
+  .cocktailName{
+    font-weight: bold;
+    font-size: 1.5em;
     
   }
-  @media screen and (max-width: 980px) {
-    nav{
-      width: 250%;
-      text-align: center;
-      justify-content: center;
-    }
-    .nabvar {
-      padding-bottom: 0;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-    
-    }
-    
-    .nabvar p{
-      width: 100%;
-      text-align: center;
-      justify-content: center;
-    }
-    
-    nav .navbar {
-      font-size: 20px;
-      
-    }
-    .nabvar h3{
-      font-size: -webkit-xxx-large;
-    }
-  
-    .wrapper{
-      /* padding-bottom: 0; */
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      width: 80%;
-      margin-left: 10%;
-    }
-    .wrapper h3{
-      font-size: 50px;
-
-    }
-    .form-input{
-      font-size: 40px;
-    }
-
-    .wrapper button{
-      font-size: 40px;
-    }
-
-    .parent{
-      padding-bottom: 0;
-      justify-content: center;
-      width: 250%;
-      padding-right: 10%;
-      flex-direction:column;
-      padding-top: 30rem;
-    }
-    .wrapper2{
-      padding-bottom: 100px;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      width: 80%;
-      margin-left: 10%;;
-
-    }
-    #history{
-      padding-bottom: 2rem;
-      font-size: 200%;
-    }
+  .howToMake, .typeOfglass {
+    font-weight: bold;
+    font-size: 1.2em;
   }
-
-      
-  @media screen and (max-width: 768px) {
-    nav{
-      width: 250%;
-      text-align: center;
-    }
-    .nabvar {
-      padding-bottom: 0;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-    
-    }
-    
-    .nabvar p{
-      width: 100%;
-      text-align: center;
-    }
-    
-    nav .navbar {
-      font-size: 20px;
-      
-    }
   
-    .wrapper{
-      padding-bottom: 20px;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      width: 80%;
-      margin-left: 10%;
-    }
-    .wrapper button{
-      font-size: 30px;
-    }
-    .parent{
-      padding-bottom: 0;
-      justify-content: center;
-      width: 250%;
-      padding-right: 10%;
-      flex-direction:column;
-      padding-top: 30rem;
-    }
-    .wrapper2{
-      padding-bottom: 0;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      width: 80%;
-      margin-left: 10%;;
-    }
-    #history{
-      padding-bottom: 2rem;
-    }
-  }
- 
-
-      
-
-
-  
-  
-
-  
-  
-  
-
-  
-  
-    
- 
-  
- 
-
-  
-
-
