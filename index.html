@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meals & Drinks</title>
+    <title>Cocktailparty</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <title>Pair Me: The Food and Drink Pairing App</title> -->
+    <title>Cocktail Buddy</title>
 </head>
 
-<header>
-   <h1 class="header">Meals and Drinks</h1>
-   
-</header>
-<main>
-    <form>
-        
-         <div class="container">
-        <div class="columns">
-            <div class="box">
-    <div class="hero-form">
-        <h3>Search Meal</h3>
-        <p>Fill out this form to seach for Meals</p>
-        <form>
-          <label for="name">Enter Meal Name</label>
-          <input type="text" placeholder="Meal Name" id="name" name="name" class="form-input" />
-         
-          <button type="submit">
-            Search!
-          </button>
-      </div>
-    </div>
-  
-      
-      <div class="hero-form1">
-        <div class="box">
-          
-        <h3>Search Drink</h3>
-        <p>Fill out this form to seach for Drinks</p>
-        <form>
-          <label for="name">Enter Drink Name</label>
-          <input type="text" placeholder="Drink name" id="name" name="name" class="form-input" /></input>
-    
-          <button type="submit">
-            Search!
-          </button>
+<body id="blank">
+    <header>
+        <div class="hero">
+            <h1>Cocktail Buddy</h1>
+            <h2>Fancy a Drink?<i class="fas fa-glass-martini"></i></h2>
+            </div>
+    </header>
+    <main>
+    <div class="container">
+        <div class="row">
+            <h2>Click on your mood <br> We have a cocktail for you:</h2>
+            <button class=" col-md-2 buttonBold" id="moodButton" onclick="getrandomCocktail()">Bold</button>
+            <button class=" col-md-2 buttonFiesty" id="moodButton" onclick="getrandomCocktail()">Fiesty</button>
+            <button class=" col-md-2 buttonPlayful" id="moodButton" onclick="getrandomCocktail()">Playful</button>
+            <button class=" col-md-2 buttonEnergetic"  id="moodButton" onclick="getrandomCocktail()">Energetic</button>
+            <button class=" col-md-2 buttonWild" id="moodButton" onclick="getrandomCocktail()">Wild</button>
+            <button class=" col-md-2 buttonChill"  id="moodButton" onclick="getrandomCocktail()">Chill</button>
         </div>
-    </div> 
-</div>
-</div>
-          </form>
+        </div>
+        <!--end of row-->
+    </main>
+    <!--end of main-->
+    <section>
+        <div class="container drinkSearch">
+            <div class="row1">
+                <h3>Have a preference? <br> Search by cocktail name here:</h3>
+                <div class="col-xs-offset-2 col-xs-6" id="errormsg"></div>
+                <input type="text" class="col-xs-offset-2 col-xs-6" id="searchCocktail">
+                <button class="col-xs-2" id="shakebutton" onclick="getCocktailByName()">Shake</button>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container drinkSearch-->
     </section>
-
-
-<body>
-
+    <!--end of section-->
+    <div class="row displayCocktail" id="#displayCocktail">
+        <div class="col-xs-push-2 col-xs-5" id="cocktailPicture"></div>
+        <div class="col-xs-push-1 col-xs-4" id="cocktailInfo">
+            <div id="cocktailTitle"></div>
+            <div id="howTo"></div>
+            <div id="instructions"></div>
+        </div>
+        <!--end of cocktailInfo-->
+    </div>
+    <!--end of displayCocktail-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
 
 </html>
