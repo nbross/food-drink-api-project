@@ -1,124 +1,152 @@
-var searchCocktail = document.getElementById('searchCocktail');
+//global variabel, get inputvalue despite of it changing 
+const searchCocktail = document.getElementById('searchCocktail');
 
 searchCocktail.addEventListener('change', () => {
-    var searchValue = searchCocktail.value;
+    const searchValue = searchCocktail.value;
     getCocktailByName(searchValue);
 })
 
-//function with API to return a random cocktail
-var randomCocktail = function() {
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
-    fetch(apiUrl).then((response) => response.json())
-    .then((cocktailInfo) => {
-        displayrandomCocktail(cocktailInfo)
-    })
-    .catch((error) => {
-        if (document.getElementById("search-cocktail").value == "") {
-            showErrMsg(error)
-        }else {
-            hideErrMsg(error)
-        };
-    })
+
+//function with API to get random cocktail
+//and calling function displayrandomCocktail to print out the cocktailinfo 
+ function getrandomCocktail() {
+
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+        .then((response) => response.json())
+        .then((cocktailData) => {
+            displayrandomCocktail(cocktailData)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
 }
 
-//function with API to search for a cocktail by name
+//function with API to search cocktail by name 
+//and calling function displayinputvalue to print out the cocktailinfo 
+function getCocktailByName(cocktail) {
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`)
+        .then((response) => response.json())
+        .then((cocktailData) => {
+            displayinputvalue(cocktailData)
+        })
+        .catch((error) => {
+            if (document.getElementById("searchCocktail").value == "") {
+                showErrMsg(error)
+            } else {
+                hideErrMsg(error)
+            };
+        })
+}
 
-var getCocktailByName = function (cocktail) {
-    var apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}";
-    
-    fetch(apiUrl).then((response) => response.json())
-    .then((cocktailInfo) => {
-        displayDrinkResult(cocktailInfo)
-    })
-    .catch((error) => {
-        if (document.getElementById("search-cocktail").value == "") {
-            showErrMsg(error)
-        } else {
-            hideErrMsg(error)
-        };
-    })
-} 
 
-//function to display random cocktail results
-var displayRandomCocktail = function (cocktailInfo) {
-    var { drinks } = cocktailInfo;
-    var cocktailImgEl = document.getElementById('cocktailPicture');
-    var cocktailPicture = ' <img class="drinkThumb" src="${drinks.[0].strDrinkThumb}">';
-    cocktailImgEl.innerHTML = cocktailPicture;
+//Function that creates what to display in html, called when clicking on moodButton
+function displayrandomCocktail(cocktailData) {
+    const { drinks } = cocktailData;
+    const cocktailpictureElement = document.getElementById('cocktailPicture');
+    let cocktailPicture = `
+    <img class="drinkThumb" src= "${drinks[0].strDrinkThumb}">`;
 
-    //display cocktail info
-    var cocktailTitleEl= document.getElementById('cocktailTitle');
+    cocktailpictureElement.innerHTML = cocktailPicture;
 
-    var cocktailData = '<h4 class="cocktailName">${drinks[0].strDrink}</h4> <pclass+"typeOfglass">Type of glass:</p><p>${dinks[0].strGlass}</p. </br><p class="howToMake>How to make:</p>'
-    cocktailTitleEl.innerHTML = cocktailData;
+    //display first cocktailinfo
+    const cocktailTitleElement = document.getElementById('cocktailTitle');
 
-    var cocktailInfoEl = document.getElementById('howTo');
+    let cocktailInfo = `
+    <h4 class="cocktailName"> ${drinks[0].strDrink} </h4>
+    <p class="typeOfglass">Type of glass:</p><p>${drinks[0].strGlass}</p>
+    </br><p class="howToMake">How to make:</p>`
 
-    var result = "";
-    for(var i = 1; i <= 15; i++) {
-        var measures = 'strMeasure' + i;
-        var ingredients = 'strIngredients' + i;
-        if ((drinks[0][measures]) && (drinks[0][ingredients]) !=="") {
-            result = result = '<p>${drinks[0}{measures]} ${drinks[0][ingredients]}</p>';
+    cocktailTitleElement.innerHTML = cocktailInfo;
 
-            cocktailInfoEl.innerHTML = result;
+
+    //display second cocktailinfo
+    const cocktailInfoElement = document.getElementById('howTo');
+
+    let result = '';
+    for (var i = 1; i <= 15; i++) {
+        let measures = 'strMeasure' + i;
+        let ingridients = 'strIngredient' + i;
+        if ((drinks[0][measures]) && (drinks[0][ingridients]) !== "") {
+            result = result + ` <p>${drinks[0][measures]} ${drinks[0][ingridients]}</p>`;
+
+            cocktailInfoElement.innerHTML = result;
         };
     }
 
-        var cocktailInstructionsEl = document.getElementById('instructions');
-        var instructions = '</br><p>${drinks[0].strInstructions}</p>';
-        cocktailInstructionsEl.innerHTML = instructions;    
-        }
 
-        //display the drink by name results
-        var displayDrinkResult = function(cocktailInfo) {
-            var { drinks } = cocktailInfo;
-            var cocktailImgEl = document.getElementById('cocktailPicture');
-            var cocktailPicture = '<img class="drinkThumb" src="{drinks[0].strDrinkThumb}">';
-            cocktailImgEl.innerHTML = cocktailPicture;
+    //display third cocktailinfo
+    const cocktailInstructionsElement = document.getElementById('instructions');
+    let instructions = `
+    </br><p>${drinks[0].strInstructions}</p>`;
 
-            //display cocktail info
-            var cocktailTitleEl = document.getElementById('cocktailTitle');
+    cocktailInstructionsElement.innerHTML = instructions;
 
-            var cocktailData = '<h4 class="cocktailName">${drinks[0].strGlass}<p> </br><p class="howToMake">How to makes:</p>';
-            cocktailTitleEl.innerHTML = cocktailData;
+}
 
-            var cocktailInfoEl = document.getElementById('howTo');
 
-            var result = "";
-            for(var i = 1; i <= 15; i++) {
-                var measures = 'strMeasure' + i;
-                var ingredients = 'strIngredients' + i;
-                if((drinks[0][measures]) && (drinks[0][ingredients]) !== "") {
-                    result= result + '<p>${drinks[0][measures]} ${drinks[0][ingredients]}</p>';
+//Function that creates what to display in html
+//it is being called when clicking on shakebutton to display info from input value
+function displayinputvalue(cocktailData) {
+    const { drinks } = cocktailData;
+    const cocktailpictureElement = document.getElementById('cocktailPicture');
+    let cocktailPicture = `
+    <img class="drinkThumb" src= "${drinks[0].strDrinkThumb}">`;
 
-                    cocktailInfoEl.innerHTML = result;
-                };
-            }
+    cocktailpictureElement.innerHTML = cocktailPicture;
 
-            var cocktailInstructionsEl = document.getElementById('instructions');
-            var instructions = '</br><p>${drinks[0].strInstructions}</p>';
-             cocktailInstructionsEl.innerHTML = instructions;
-        }
+    //display first cocktailinfo
+    const cocktailTitleElement = document.getElementById('cocktailTitle');
 
-        //button shake
-        $(document).ready(function() {
-            $("#shakebutton").click(function(){
-                $("#shakebutton").effect("shake", { times: 3}, 450);
-            });
-        });
+    let cocktailInfo = `
+    <h4 class="cocktailName"> ${drinks[0].strDrink} </h4>
+    <p class="typeOfglass">Type of glass:</p><p>${drinks[0].strGlass}</p>
+    </br><p class="howToMake">How to make:</p>`
 
-        //Display error message for empty search
+    cocktailTitleElement.innerHTML = cocktailInfo;
 
-        var showErrMsg = function(error) {
-            var errorEl = document.getElementById('errormsg');
-            var errorMsg = '<p class"errormsg">Please enter a drink name!</p>';
-            errorEl.innerHTML = errorMsg;
+
+    //display second cocktailinfo
+    const cocktailInfoElement = document.getElementById('howTo');
+
+    let result = '';
+    for (var i = 1; i <= 15; i++) {
+        let measures = 'strMeasure' + i;
+        let ingridients = 'strIngredient' + i;
+        if ((drinks[0][measures]) && (drinks[0][ingridients]) !== "") {
+            result = result + ` <p>${drinks[0][measures]} ${drinks[0][ingridients]}</p>`;
+
+            cocktailInfoElement.innerHTML = result;
         };
+    }
 
-        var hideErrMsg = function(error) {
-            var errorEl = document.getElementById('errormsg');
-            errorEl.innerHTML = "";
-        };
 
+    //display third cocktailinfo
+    const cocktailInstructionsElement = document.getElementById('instructions');
+    let instructions = `
+    </br><p>${drinks[0].strInstructions}</p>`;
+
+    cocktailInstructionsElement.innerHTML = instructions;
+
+}
+
+//Button shake
+$(document).ready(function() {
+    $("#shakebutton").click(function() {
+        $("#shakebutton").effect("shake", { times: 3 }, 450);
+    });
+});
+
+
+//Error to display when searchvalue is empty and shake button has been clicked
+
+function showErrMsg(error) {
+    const errorDivElement = document.getElementById('errormsg');
+    const errormsg = `<p class="errormsg">You haven't told me what you want to drink.</p>`
+    errorDivElement.innerHTML = errormsg;
+};
+
+function hideErrMsg(error) {
+    const errorDivElement = document.getElementById('errormsg');
+    errorDivElement.innerHTML = "";
+};
