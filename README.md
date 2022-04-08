@@ -1,2 +1,3 @@
-# food-drink-api-project
-This is the first group project in CWRU's coding bootcamp.
+# project-idea : Cocktail Buddy!
+
+# This is the first group project in CWRU's coding bootcamp.
