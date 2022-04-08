@@ -1,17 +1,24 @@
 # project-idea : Cocktail Buddy!
 
 * This is the first group project in CWRU's coding bootcamp.
+## User Story:
+As a consumer of various cocktails, I want a simple way to find cocktail recipes by name, So that I can quickly make drinks and know what I need for that drink
+
+
 
 ## Discription:
-This site was intended as a bartenders' best friend! A user can search through hundreds of drink recipes and like various recipes.
+ An application that helps users find new cocktail ideas and recipes depending on the users mood or the user is able to search from their favorite drink to find their recipe!
+
 
 
 ## Motivation :
+- Our motivation for this application is to help users who are looking for new cocktail ideas and recipes.
+
 
 
 
 ## Screenshots:
-![](./assets/css/images/screenshot(75).png)
+![](./assets/images/screenshot.png)
 
 ## Tech/framework used
 <b>Built with</b>
@@ -21,14 +28,24 @@ This site was intended as a bartenders' best friend! A user can search through h
 - Jquery
 - bootstrap
 
-##Website: 
+### Website: 
 ### github repository: 
 
 ### API Reference:
 The Cocktail DB: https://www.thecocktaildb.com/api.php
 
+## Future Development Plans :
+<b>Future enhancements to this app include:</b>
+ - Adding the ability to save and categorize cocktails.
+ - Allow users to search for cocktails by preferred liquor
+ - Adding the ability to get a meal suggestion to best pair cocktails with food.
+- Allowing users to access their saved cocktail recipes offline
 
-## More Info
+
+
+
+
+
 
 
 ## Contribution
