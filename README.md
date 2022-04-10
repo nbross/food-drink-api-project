@@ -28,9 +28,8 @@ As a consumer of various cocktails, I want a simple way to find cocktail recipes
 - Jquery
 - bootstrap
 
-### Website: https://tljurecki.github.io/project-idea/
-### Github repository: https://github.com/tljurecki/project-idea.git
-
+### Website: https://nbross.github.io/food-drink-api-project
+### Github repository: https://github.com/nbross/food-drink-api-project.git
 ### API Reference:
 The Cocktail DB: https://www.thecocktaildb.com/api.php
 
